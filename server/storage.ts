@@ -155,7 +155,10 @@ export class MemStorage implements IStorage {
       { name: 'Home & Garden', slug: 'home-garden', description: 'Furniture, decor, and gardening' },
       { name: 'Health & Beauty', slug: 'health-beauty', description: 'Beauty products and healthcare items' },
       { name: 'Sports', slug: 'sports', description: 'Sports equipment and apparel' },
-      { name: 'Toys & Games', slug: 'toys-games', description: 'Toys, games, and entertainment' }
+      { name: 'Toys & Games', slug: 'toys-games', description: 'Toys, games, and entertainment' },
+      { name: 'Food & Groceries', slug: 'food-groceries', description: 'Fresh food, groceries, and pantry items' },
+      { name: 'Local Cuisine', slug: 'local-cuisine', description: 'Traditional Lesotho and African dishes' },
+      { name: 'Restaurants & Takeout', slug: 'restaurants', description: 'Restaurant meals and food delivery' }
     ];
     
     categories.forEach(category => {
