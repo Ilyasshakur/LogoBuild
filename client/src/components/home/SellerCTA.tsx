@@ -95,7 +95,7 @@ const SellerCTA = () => {
                 <span>Support at every step</span>
               </li>
             </ul>
-            <Button asChild className="bg-white hover:bg-neutral-100 text-primary font-medium py-3 px-6 h-auto rounded-md transition duration-200">
+            <Button className="bg-white hover:bg-neutral-100 text-primary font-medium py-3 px-6 h-auto rounded-md transition duration-200" asChild>
               <Link href="/seller/register">
                 Start Selling Today
               </Link>

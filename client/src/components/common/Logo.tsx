@@ -10,12 +10,11 @@ const Logo = () => {
         fill="currentColor" 
         className="w-10 h-10"
       >
-        <path d="M150,180 L350,180 L300,220 L200,220 Z" />
-        <path d="M140,220 L180,350 L320,350 L360,220 Z" />
-        <path d="M200,160 Q250,120 300,160" strokeWidth="20" fill="none" stroke="currentColor" />
-        <rect x="180" y="250" width="25" height="70" rx="5" />
-        <rect x="237.5" y="250" width="25" height="70" rx="5" />
-        <rect x="295" y="250" width="25" height="70" rx="5" />
+        <path d="M150,100 L350,100 C370,100 380,120 380,140 L350,200 L150,200 L120,140 C120,120 130,100 150,100 Z" />
+        <path d="M120,140 L150,200 L350,200 L380,140 L120,140 Z" />
+        <rect x="160" y="140" width="40" height="120" rx="10" />
+        <rect x="230" y="140" width="40" height="120" rx="10" />
+        <rect x="300" y="140" width="40" height="120" rx="10" />
       </svg>
     </div>
   );
