@@ -18,8 +18,8 @@ import SellerOrders from "@/pages/seller/orders";
 import AdminDashboard from "@/pages/admin/dashboard";
 import AdminProducts from "@/pages/admin/products";
 import AdminSellers from "@/pages/admin/sellers";
-import { AuthProvider } from "@/hooks/use-auth";
-import { CartProvider } from "@/hooks/use-cart";
+import { AuthProvider } from "@/context/AuthContext";
+import { CartProvider } from "@/context/CartContext";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
