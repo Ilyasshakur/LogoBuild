@@ -156,7 +156,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="mr-3 text-secondary" size={18} />
-                <span className="text-neutral-400">+266 2222 3333</span>
+                <span className="text-neutral-400">+266 62626266</span>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-3 text-secondary" size={18} />
