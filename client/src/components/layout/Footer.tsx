@@ -24,6 +24,7 @@ const Footer = () => {
                 <Logo />
               </div>
               <span className="text-2xl font-heading font-bold text-white">UshopLS</span>
+              <span className="text-sm text-neutral-400 block">Lesotho's Own Marketplace</span>
             </div>
             <p className="text-neutral-400 mb-6">
               Lesotho's premier online marketplace connecting local businesses with customers nationwide.
