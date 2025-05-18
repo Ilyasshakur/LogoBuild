@@ -176,9 +176,12 @@ const SellerCTA = () => {
                       className="text-sm text-neutral-700 cursor-pointer"
                     >
                       I agree to the{" "}
-                      <Link href="/terms" className="text-primary hover:underline">
+                      <span 
+                        onClick={() => window.location.href = '/terms'} 
+                        className="text-primary hover:underline cursor-pointer"
+                      >
                         Terms and Conditions
-                      </Link>
+                      </span>
                     </Label>
                   </div>
 
