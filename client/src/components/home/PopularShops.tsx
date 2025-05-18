@@ -53,8 +53,8 @@ const ShopCard = ({ shop }: ShopCardProps) => {
         </div>
         <div className="mt-4 flex items-center justify-between">
           <Rating value={rating} count={reviewCount} />
-          <Link href={`/shops/${id}`}>
-            <a className="text-primary font-medium text-sm hover:underline">Visit Shop</a>
+          <Link href={`/shops/${id}`} className="text-primary font-medium text-sm hover:underline">
+            Visit Shop
           </Link>
         </div>
       </div>
@@ -109,8 +109,8 @@ const PopularShops = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-bold">Popular Shops</h2>
             <p className="text-neutral-600">Discover Lesotho's best local businesses</p>
           </div>
-          <Link href="/shops">
-            <a className="text-primary font-medium hidden md:block hover:underline">View All Shops</a>
+          <Link href="/shops" className="text-primary font-medium hidden md:block hover:underline">
+            View All Shops
           </Link>
         </div>
         
