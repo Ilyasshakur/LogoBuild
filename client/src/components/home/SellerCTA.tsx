@@ -176,10 +176,8 @@ const SellerCTA = () => {
                       className="text-sm text-neutral-700 cursor-pointer"
                     >
                       I agree to the{" "}
-                      <Link href="/terms">
-                        <a className="text-primary hover:underline">
-                          Terms and Conditions
-                        </a>
+                      <Link href="/terms" className="text-primary hover:underline">
+                        Terms and Conditions
                       </Link>
                     </Label>
                   </div>
