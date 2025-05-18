@@ -60,45 +60,33 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/about">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    About Us
-                  </a>
+                <Link href="/about" className="text-neutral-400 hover:text-white transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/products">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Browse Categories
-                  </a>
+                <Link href="/products" className="text-neutral-400 hover:text-white transition-colors">
+                  Browse Categories
                 </Link>
               </li>
               <li>
-                <Link href="/seller/register">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Sell on UshopLS
-                  </a>
+                <Link href="/seller/register" className="text-neutral-400 hover:text-white transition-colors">
+                  Sell on UshopLS
                 </Link>
               </li>
               <li>
-                <Link href="/shipping-policy">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Shipping Policy
-                  </a>
+                <Link href="/shipping-policy" className="text-neutral-400 hover:text-white transition-colors">
+                  Shipping Policy
                 </Link>
               </li>
               <li>
-                <Link href="/return-policy">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Return Policy
-                  </a>
+                <Link href="/return-policy" className="text-neutral-400 hover:text-white transition-colors">
+                  Return Policy
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Contact Us
-                  </a>
+                <Link href="/contact" className="text-neutral-400 hover:text-white transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -108,38 +96,28 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Customer Service</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/account">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    My Account
-                  </a>
+                <Link href="/account" className="text-neutral-400 hover:text-white transition-colors">
+                  My Account
                 </Link>
               </li>
               <li>
-                <Link href="/orders/track">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Track My Order
-                  </a>
+                <Link href="/orders/track" className="text-neutral-400 hover:text-white transition-colors">
+                  Track My Order
                 </Link>
               </li>
               <li>
-                <Link href="/help">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Help Center
-                  </a>
+                <Link href="/help" className="text-neutral-400 hover:text-white transition-colors">
+                  Help Center
                 </Link>
               </li>
               <li>
-                <Link href="/report">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    Report a Product
-                  </a>
+                <Link href="/report" className="text-neutral-400 hover:text-white transition-colors">
+                  Report a Product
                 </Link>
               </li>
               <li>
-                <Link href="/faq">
-                  <a className="text-neutral-400 hover:text-white transition-colors">
-                    FAQs
-                  </a>
+                <Link href="/faq" className="text-neutral-400 hover:text-white transition-colors">
+                  FAQs
                 </Link>
               </li>
             </ul>
@@ -199,20 +177,14 @@ const Footer = () => {
             © {new Date().getFullYear()} UshopLS. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center space-x-4">
-            <Link href="/terms">
-              <a className="text-neutral-500 hover:text-white text-sm transition-colors">
-                Terms & Conditions
-              </a>
+            <Link href="/terms" className="text-neutral-500 hover:text-white text-sm transition-colors">
+              Terms & Conditions
             </Link>
-            <Link href="/privacy">
-              <a className="text-neutral-500 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </a>
+            <Link href="/privacy" className="text-neutral-500 hover:text-white text-sm transition-colors">
+              Privacy Policy
             </Link>
-            <Link href="/cookies">
-              <a className="text-neutral-500 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </a>
+            <Link href="/cookies" className="text-neutral-500 hover:text-white text-sm transition-colors">
+              Cookie Policy
             </Link>
           </div>
         </div>

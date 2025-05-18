@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Logo = () => {
@@ -6,19 +7,20 @@ const Logo = () => {
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 500 500" 
-        fill="#0F4C81" 
+        fill="currentColor" 
         className="w-10 h-10"
       >
-        {/* Shopping basket */}
-        <path d="M100,200 L400,200 L350,300 L150,300 Z" />
-        {/* Vertical lines */}
-        <rect x="180" y="220" width="30" height="60" fill="white" />
-        <rect x="235" y="220" width="30" height="60" fill="white" />
-        <rect x="290" y="220" width="30" height="60" fill="white" />
+        {/* Shopping basket top edge */}
+        <path d="M150,180 L350,180 L300,220 L200,220 Z" />
+        {/* Shopping basket sides */}
+        <path d="M140,220 L180,350 L320,350 L360,220 Z" />
         {/* Handle */}
-        <path d="M200,180 L250,150 L300,180" strokeWidth="30" strokeLinecap="round" />
+        <path d="M200,160 Q250,120 300,160" strokeWidth="20" fill="none" stroke="currentColor" />
+        {/* Grid pattern */}
+        <rect x="180" y="250" width="25" height="70" rx="5" />
+        <rect x="237.5" y="250" width="25" height="70" rx="5" />
+        <rect x="295" y="250" width="25" height="70" rx="5" />
       </svg>
-      <span className="ml-2 text-xl font-bold text-primary">UshopLS</span>
     </div>
   );
 };
