@@ -1,0 +1,69 @@
+Create an admin dashboard for the UshopLs e-commerce platform on Replit, accessible at `/admin`, to manage Lesotho's own marketplace. The dashboard is for the admin to oversee users, products, commissions, payments, deliveries, and customization.
+
+## Features
+- **Access**: Restrict to admin users (e.g., `admin@ushopls.co.ls` with a secure password) via `/admin` route.
+- **User Management**: View/edit a list of buyers and sellers (name, email, phone, role) with options to suspend or delete accounts.
+- **Product Management**: Display and manage all product listings (name, seller, price, category) with approve/reject options.
+- **Commission Settings**: Monitor total commissions (4% from buyers, 3% from sellers, 3% from delivery charges) and adjust rates via a form.
+- **Payment Oversight**: Show transaction logs for M-Pesa, EcoCash, bank cards, and cash on delivery, with options to verify or handle refunds.
+- **Delivery Management**: Track delivery statuses (Pending, Shipped, Delivered) and update them as needed.
+- **Customization**: Allow branding edits (e.g., upload logo, change colors) and approve seller storefront customizations.
+- **Contact Support**: View and respond to inquiries sent to `info@ushopls.co.ls`.
+
+## Technical Requirements
+- **Frontend**: Use HTML, CSS, JavaScript for the dashboard interface.
+- **Backend**: Extend existing Node.js with Express to handle `/admin` route with authentication.
+- **Data Storage**: Use existing local JSON files or Replit DB to fetch and update user, product, and transaction data.
+- **Security**: Implement basic authentication (e.g., check for admin role) to protect the dashboard.
+
+## Initial Setup
+- Add a `/admin` route in `server.js`:
+```javascript
+app.get('/admin', (req, res) => {
+  if (req.user && req.user.role === 'admin') {
+    res.sendFile('admin.html', { root: 'public' });
+  } else {
+    res.redirect('/login');
+  }
+});
+```
+- Create `admin.html` in the `public` folder with sections for each feature.
+- Style with a table for data display and forms for edits.
+
+## Example Implementation
+- **User Table**:
+```html
+<table>
+  <tr><th>Name</th><th>Email</th><th>Role</th><th>Actions</th></tr>
+  <!-- Populate with JavaScript fetch -->
+</table>
+<script>
+  fetch('/api/users').then(res => res.json()).then(users => {
+    const table = document.querySelector('table');
+    users.forEach(user => {
+      const row = table.insertRow();
+      row.innerHTML = `<td>${user.name}</td><td>${user.email}</td><td>${user.role}</td><td><button>Suspend</button></td>`;
+    });
+  });
+</script>
+```
+- **Commission Form**:
+```html
+<form>
+  <label>Buyer Commission (\%): <input type="number" value="4"></label><br>
+  <label>Seller Commission (\%): <input type="number" value="3"></label><br>
+  <label>Delivery Commission (\%): <input type="number" value="3"></label><br>
+  <button type="submit">Update Rates</button>
+</form>
+```
+
+## Next Steps
+- Populate tables with existing data (users, products, transactions).
+- Add event listeners for form submissions and button clicks (e.g., suspend user, update commission).
+- Test dashboard functionality in Replit’s webview.
+- Ensure changes reflect in the buyer/seller interfaces.
+
+## Notes
+- Build on the existing UshopLs structure.
+- Use Replit’s console for debugging.
+- Secure with HTTPS after deployment.
