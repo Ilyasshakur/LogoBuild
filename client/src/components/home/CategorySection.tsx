@@ -16,7 +16,11 @@ const CategoryCard = ({ category }: { category: Category }) => {
     "home-garden": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     "health-beauty": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
     "sports": "https://pixabay.com/get/gcff0e30b9a9cf73b506f1c2a3dc65c3f6aba487d97f2c48f58c0c58e82c77f67c13a9c9de3fc08e3bb19a99c29d65fad_1280.jpg",
-    "toys-games": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+    "toys-games": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    "restaurants": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    "food-groceries": "https://images.unsplash.com/photo-1543168256-418811576931?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    "local-cuisine": "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    "phones-gadgets": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
   };
   
   // Find the right image to use
@@ -62,7 +66,25 @@ const CategorySection = () => {
   
   useEffect(() => {
     if (categories) {
-      setDisplayCategories(categories);
+      // Prioritize restaurants, food, and phones categories by custom sorting
+      const sortedCategories = [...categories].sort((a, b) => {
+        // Priority categories to display first
+        const priorityOrder: {[key: string]: number} = {
+          "restaurants": 1,
+          "phones-gadgets": 2,
+          "food-groceries": 3,
+          "local-cuisine": 4
+        };
+        
+        // Calculate priority (-1 = high priority, Infinity = default priority)
+        const priorityA = priorityOrder[a.slug] || Infinity;
+        const priorityB = priorityOrder[b.slug] || Infinity;
+        
+        return priorityA - priorityB;
+      });
+      
+      // Only display first 6 categories
+      setDisplayCategories(sortedCategories.slice(0, 6));
     }
   }, [categories]);
   
