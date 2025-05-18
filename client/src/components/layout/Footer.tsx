@@ -151,7 +151,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="mt-1 mr-3 text-secondary" size={18} />
                 <span className="text-neutral-400">
-                  123 Kingsway, Maseru 100, Lesotho
+                  Room 188 Metcash Complex, Maseru, Lesotho
                 </span>
               </li>
               <li className="flex items-center">
