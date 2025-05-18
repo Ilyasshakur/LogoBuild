@@ -56,14 +56,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative">
-        <Link href={`/products/${slug}`}>
-          <a>
-            <img 
-              src={image} 
-              alt={name} 
-              className="w-full h-64 object-cover object-center"
-            />
-          </a>
+        <Link href={`/products/${slug}`} className="block">
+          <img 
+            src={image} 
+            alt={name} 
+            className="w-full h-64 object-cover object-center"
+          />
         </Link>
         <div className="absolute top-3 right-3 flex space-x-2">
           <Button 
@@ -86,15 +84,13 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="mb-1 text-sm text-neutral-500">
           Brand Name
         </div>
-        <Link href={`/products/${slug}`}>
-          <a className="block">
-            <h3 className="font-medium text-neutral-800 mb-1 group-hover:text-primary">
-              {name}
-            </h3>
-          </a>
+        <Link href={`/products/${slug}`} className="block">
+          <h3 className="font-medium text-neutral-800 mb-1 group-hover:text-primary">
+            {name}
+          </h3>
         </Link>
         <div className="mb-2">
-          <Rating value={rating} count={reviewCount} />
+          <Rating value={rating || 0} count={reviewCount || 0} />
         </div>
         <div className="flex justify-between items-center">
           <div className="font-semibold text-lg">
@@ -110,7 +106,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </div>
           <Button 
             onClick={handleAddToCart}
-            variant="primary" 
+            variant="default" 
             size="icon" 
             className="bg-primary hover:bg-primary-dark text-white p-2 rounded-md transition"
           >

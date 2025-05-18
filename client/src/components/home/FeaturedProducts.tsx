@@ -50,8 +50,8 @@ const FeaturedProducts = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-bold">Featured Products</h2>
             <p className="text-neutral-600">Discover our most popular items</p>
           </div>
-          <Link href="/products">
-            <a className="text-primary font-medium hidden md:block hover:underline">View All Products</a>
+          <Link href="/products" className="text-primary font-medium hidden md:block hover:underline">
+            View All Products
           </Link>
         </div>
         
@@ -70,7 +70,7 @@ const FeaturedProducts = () => {
         </div>
         
         <div className="mt-8 text-center md:hidden">
-          <Link href="/products">
+          <Link href="/products" className="inline-block">
             <Button variant="link" className="text-primary font-medium hover:underline">
               View All Products
             </Button>
