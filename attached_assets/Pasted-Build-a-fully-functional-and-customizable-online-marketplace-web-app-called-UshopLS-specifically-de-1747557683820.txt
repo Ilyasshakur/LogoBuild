@@ -1,0 +1,131 @@
+Build a fully functional and customizable online marketplace web app called UshopLS, specifically designed for Lesotho. The platform must allow local businesses to list and sell their products while customers can browse, shop, and make secure payments. This should be built as a full-stack application with modern technologies and be ready to run on Replit.
+
+🌍 Platform Overview:
+Name: UshopLS
+Slogan: "UshopLS – Your Local Market, Online."
+Location Target: Lesotho
+Languages: English (with Sesotho support planned)
+Use Case: Allow sellers in Lesotho to register, upload products, receive orders, and get paid. Buyers can shop, pay via mobile methods (Mpesa/Ecocash), and receive deliveries.
+
+🧩 Required Features:
+🔸 FRONTEND:
+Responsive design for mobile + desktop (use Tailwind CSS or Bootstrap)
+
+Homepage with:
+
+Logo
+
+Hero banner with slogan: “UshopLS – Your Local Market, Online.”
+
+Featured categories (e.g., Phones, Clothes, Furniture)
+
+Search bar
+
+Login / Register links
+
+Product listing page with:
+
+Filters (category, price, availability)
+
+Search functionality
+
+Product detail page
+
+Shopping Cart page (add/update/remove)
+
+Checkout page
+
+User account dashboard
+
+Vendor dashboard (for managing products and orders)
+
+Order history and status tracking
+
+🔸 BACKEND:
+User authentication (Signup/Login with JWT or session)
+
+Roles: Admin, Seller, Buyer
+
+CRUD for Products, Categories, Orders
+
+Cart and checkout logic
+
+Admin panel to approve/reject seller accounts and products
+
+RESTful API for all frontend interactions
+
+🔸 DATABASE:
+Use MongoDB or PostgreSQL
+
+Collections/Tables:
+
+Users
+
+Products
+
+Orders
+
+Categories
+
+Payments
+
+Delivery Info
+
+🔸 PAYMENT INTEGRATION:
+Use placeholder/dummy checkout API
+
+Add support for Mpesa and Ecocash payments later (via API integration)
+
+Optional: Stripe/Flutterwave for card payments
+
+🔸 NOTIFICATIONS:
+Email confirmations (via SendGrid or Nodemailer)
+
+Optional: WhatsApp/SMS order alerts for sellers
+
+🛠️ TECH STACK:
+Frontend: React.js or Next.js (preferred for routing)
+
+Backend: Node.js + Express
+
+Database: MongoDB (or PostgreSQL)
+
+Styling: Tailwind CSS
+
+Auth: JWT + bcrypt
+
+Deployment: Must run and test on Replit
+
+⚙️ Customizability:
+Easy to change:
+
+Color scheme
+
+Logo
+
+Slogan
+
+Categories and branding
+
+Use .env for environment config
+
+Centralized config files for platform name, logo path, etc.
+
+🧪 Bonus Features (Optional but Preferred):
+Multi-vendor support (vendors manage their own shopfront)
+
+Rating & Review system for products
+
+Wishlist/Favorite items
+
+Discount codes or promo offers
+
+Inventory alerts (low stock warning)
+
+📦 Final Notes:
+Provide clear setup instructions in a README.md
+
+Include .env.example file for environment variables
+
+Must be modular and easily extendable
+
