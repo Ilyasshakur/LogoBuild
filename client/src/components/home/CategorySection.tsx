@@ -23,8 +23,7 @@ const CategoryCard = ({ category }: { category: Category }) => {
   const bgImage = image || defaultImages[slug] || "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400";
   
   return (
-    <Link href={`/products?category=${slug}`}>
-      <a className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1 group">
+    <Link href={`/products?category=${slug}`} className="bg-white rounded-lg shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1 group block">
         <div 
           className="h-32 bg-cover bg-center bg-neutral-200" 
           style={{ backgroundImage: `url('${bgImage}')` }}
@@ -33,7 +32,6 @@ const CategoryCard = ({ category }: { category: Category }) => {
           <h3 className="font-medium text-neutral-800 group-hover:text-primary">{name}</h3>
           <p className="text-xs text-neutral-500">Browse Products</p>
         </div>
-      </a>
     </Link>
   );
 };
@@ -76,8 +74,8 @@ const CategorySection = () => {
             <h2 className="text-2xl md:text-3xl font-heading font-bold">Shop by Category</h2>
             <p className="text-neutral-600">Find what you need from our curated collections</p>
           </div>
-          <Link href="/products">
-            <a className="text-primary font-medium hidden md:block hover:underline">View All Categories</a>
+          <Link href="/products" className="text-primary font-medium hidden md:block hover:underline">
+            View All Categories
           </Link>
         </div>
         
@@ -91,7 +89,7 @@ const CategorySection = () => {
         </div>
         
         <div className="mt-6 text-center md:hidden">
-          <Link href="/products">
+          <Link href="/products" className="inline-block">
             <Button variant="link" className="text-primary font-medium hover:underline">
               View All Categories
             </Button>
