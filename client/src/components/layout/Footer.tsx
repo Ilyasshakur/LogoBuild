@@ -10,6 +10,7 @@ import {
   Phone,
   Mail,
   Send,
+  MessageCircle,
 } from "lucide-react";
 
 const Footer = () => {
@@ -29,9 +30,11 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://facebook.com/ushopls"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-secondary transition-colors"
-                aria-label="Facebook"
+                aria-label="Follow us on Facebook"
               >
                 <Facebook size={20} />
               </a>
@@ -156,7 +159,18 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="mr-3 text-secondary" size={18} />
-                <span className="text-neutral-400">support@ushopls.com</span>
+                <span className="text-neutral-400">ushopls@info.com</span>
+              </li>
+              <li className="flex items-center">
+                <MessageCircle className="mr-3 text-secondary" size={18} />
+                <a 
+                  href="https://wa.me/26677889900" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-neutral-400 hover:text-white transition-colors"
+                >
+                  WhatsApp Support
+                </a>
               </li>
             </ul>
             <div className="mt-6">
