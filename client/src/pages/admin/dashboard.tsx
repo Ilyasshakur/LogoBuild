@@ -187,8 +187,8 @@ export default function AdminDashboard() {
         <div className="container mx-auto px-4">
           <div className="flex items-center mb-2">
             <Home className="h-4 w-4 mr-2" />
-            <Link href="/">
-              <a className="text-neutral-500 hover:text-primary text-sm">Home</a>
+            <Link href="/" className="text-neutral-500 hover:text-primary text-sm">
+              Home
             </Link>
             <ChevronRight className="h-4 w-4 mx-2 text-neutral-400" />
             <span className="text-sm">Admin Dashboard</span>
