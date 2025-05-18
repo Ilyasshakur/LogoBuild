@@ -8,13 +8,12 @@ const Logo = () => {
         fill="currentColor" 
         className="w-10 h-10"
       >
-        {/* Shopping basket logo */}
-        <path d="M250,100 L125,200 L375,200 Z" />
-        <path d="M125,200 L100,230 L400,230 L375,200 Z" />
-        <path d="M100,230 L150,350 L350,350 L400,230 Z" />
-        <rect x="170" y="250" width="40" height="80" rx="10" />
-        <rect x="230" y="250" width="40" height="80" rx="10" />
-        <rect x="290" y="250" width="40" height="80" rx="10" />
+        <path d="M250,150 L375,200 L375,220 L125,220 L125,200 Z" />
+        <path d="M125,220 L100,250 L400,250 L375,220 Z" />
+        <path d="M100,250 L150,350 L350,350 L400,250 Z" />
+        <rect x="170" y="270" width="30" height="60" rx="5" />
+        <rect x="235" y="270" width="30" height="60" rx="5" />
+        <rect x="300" y="270" width="30" height="60" rx="5" />
       </svg>
     </div>
   );
