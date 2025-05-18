@@ -19,7 +19,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/products">
-                <Button className="bg-secondary hover:bg-secondary-dark text-white font-medium py-3 px-6 h-auto rounded-md transition duration-200">
+                <Button className="bg-secondary hover:bg-secondary-dark text-blue-500 font-medium py-3 px-6 h-auto rounded-md transition duration-200">
                   Start Shopping
                 </Button>
               </Link>
