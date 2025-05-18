@@ -48,11 +48,9 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center justify-between w-full md:w-auto">
-            <Link href="/">
-              <a className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
                 <Logo />
                 <span className="text-2xl font-heading font-bold text-primary">UshopLS</span>
-              </a>
             </Link>
             <button 
               className="md:hidden text-neutral-700 focus:outline-none"
@@ -87,11 +85,9 @@ const Header = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-6">
-            <Link href="/wishlist">
-              <a className="text-neutral-600 hover:text-primary font-medium flex items-center">
+            <Link href="/wishlist" className="text-neutral-600 hover:text-primary font-medium flex items-center">
                 <Heart className="h-5 w-5 mr-1" />
                 <span>Wishlist</span>
-              </a>
             </Link>
             
             {user ? (
@@ -106,24 +102,18 @@ const Header = () => {
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
-                    <Link href="/account">
-                      <a className="w-full cursor-pointer">Profile</a>
-                    </Link>
+                    <Link href="/account" className="w-full cursor-pointer">Profile</Link>
                   </DropdownMenuItem>
                   
                   {user.role === 'seller' && (
                     <DropdownMenuItem asChild>
-                      <Link href="/seller/dashboard">
-                        <a className="w-full cursor-pointer">Seller Dashboard</a>
-                      </Link>
+                      <Link href="/seller/dashboard" className="w-full cursor-pointer">Seller Dashboard</Link>
                     </DropdownMenuItem>
                   )}
                   
                   {user.role === 'admin' && (
                     <DropdownMenuItem asChild>
-                      <Link href="/admin/dashboard">
-                        <a className="w-full cursor-pointer">Admin Dashboard</a>
-                      </Link>
+                      <Link href="/admin/dashboard" className="w-full cursor-pointer">Admin Dashboard</Link>
                     </DropdownMenuItem>
                   )}
                   
@@ -133,16 +123,13 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <Link href="/login">
-                <a className="text-neutral-600 hover:text-primary font-medium flex items-center">
-                  <User className="h-5 w-5 mr-1" />
-                  <span>Account</span>
-                </a>
+              <Link href="/login" className="text-neutral-600 hover:text-primary font-medium flex items-center">
+                <User className="h-5 w-5 mr-1" />
+                <span>Account</span>
               </Link>
             )}
             
-            <Link href="/cart">
-              <a className="relative text-neutral-600 hover:text-primary font-medium flex items-center">
+            <Link href="/cart" className="relative text-neutral-600 hover:text-primary font-medium flex items-center">
                 <ShoppingCart className="h-5 w-5 mr-1" />
                 <span>Cart</span>
                 {cartItemCount > 0 && (
@@ -150,14 +137,11 @@ const Header = () => {
                     {cartItemCount}
                   </span>
                 )}
-              </a>
             </Link>
             
             {!user && (
-              <Link href="/register">
-                <a className="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md transition duration-200">
-                  Sign In / Register
-                </a>
+              <Link href="/register" className="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md transition duration-200">
+                Sign In / Register
               </Link>
             )}
           </div>
