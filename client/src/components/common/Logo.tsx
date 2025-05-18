@@ -3,21 +3,18 @@ import React from 'react';
 
 const Logo = () => {
   return (
-    <div className="w-10 h-10 flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 500 500" 
         fill="currentColor" 
         className="w-10 h-10"
       >
-        {/* Shopping basket base */}
-        <path d="M100,200 L400,200 L350,300 L150,300 Z" />
-        {/* Vertical lines */}
-        <rect x="180" y="220" width="30" height="60" />
-        <rect x="235" y="220" width="30" height="60" />
-        <rect x="290" y="220" width="30" height="60" />
-        {/* Handle */}
-        <path d="M200,180 L250,150 L300,180" strokeWidth="30" strokeLinecap="round" />
+        <path d="M150,100 L350,100 C370,100 380,120 380,140 L350,200 L150,200 L120,140 C120,120 130,100 150,100 Z" />
+        <path d="M120,140 L150,200 L350,200 L380,140 L120,140 Z" />
+        <rect x="160" y="140" width="40" height="120" rx="10" />
+        <rect x="230" y="140" width="40" height="120" rx="10" />
+        <rect x="300" y="140" width="40" height="120" rx="10" />
       </svg>
     </div>
   );
