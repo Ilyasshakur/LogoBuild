@@ -1,0 +1,28 @@
+Warning: validateDOMNesting(...): <a> cannot appear as a descendant of &lt;a&gt;.
+    at a
+    at a
+    at https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=53ab78f0:337:18
+    at div
+    at div
+    at div
+    at https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-AXMZZQ2X.js?v=53ab78f0:42:13
+    at https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-scroll-area.js?v=53ab78f0:112:13
+    at div
+    at https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-AXMZZQ2X.js?v=53ab78f0:42:13
+    at Provider (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-P23V4H6I.js?v=53ab78f0:48:15)
+    at https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-scroll-area.js?v=53ab78f0:50:7
+    at _c (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/src/components/ui/scroll-area.tsx:21:11)
+    at div
+    at div
+    at CategoryMenu (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/src/components/layout/CategoryMenu.tsx:24:39)
+    at header
+    at Header (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/src/components/layout/Header.tsx:45:32)
+    at div
+    at Router
+    at Provider (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-P23V4H6I.js?v=53ab78f0:48:15)
+    at TooltipProvider (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=53ab78f0:61:5)
+    at CartProvider (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/src/context/CartContext.tsx:64:32)
+    at AuthProvider (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/src/context/AuthContext.tsx:49:32)
+    at QueryClientProvider (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=53ab78f0:2805:3)
+    at App
+    at ThemeProvider (https://926664ef-bba1-4661-ad4b-9e74639199f8-00-38o5bc2mdb8d8.riker.replit.dev/src/components/ThemeProvider.tsx:26:3)
