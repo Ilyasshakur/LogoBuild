@@ -30,19 +30,19 @@ const Header = () => {
   const { cartItems } = useCart();
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   const cartItemCount = cartItems?.length || 0;
-  
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     navigate(`/products?search=${encodeURIComponent(searchQuery)}`);
   };
-  
+
   // Close mobile menu when location changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
-  
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
@@ -63,7 +63,7 @@ const Header = () => {
               )}
             </button>
           </div>
-          
+
           <div className="hidden md:flex flex-grow max-w-md mx-4">
             <form onSubmit={handleSearch} className="relative w-full">
               <Input
@@ -83,13 +83,13 @@ const Header = () => {
               </Button>
             </form>
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-6">
             <Link href="/wishlist" className="text-neutral-600 hover:text-primary font-medium flex items-center">
                 <Heart className="h-5 w-5 mr-1" />
                 <span>Wishlist</span>
             </Link>
-            
+
             {user ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -104,19 +104,19 @@ const Header = () => {
                   <DropdownMenuItem asChild>
                     <Link href="/account" className="w-full cursor-pointer">Profile</Link>
                   </DropdownMenuItem>
-                  
+
                   {user.role === 'seller' && (
                     <DropdownMenuItem asChild>
                       <Link href="/seller/dashboard" className="w-full cursor-pointer">Seller Dashboard</Link>
                     </DropdownMenuItem>
                   )}
-                  
+
                   {user.role === 'admin' && (
                     <DropdownMenuItem asChild>
                       <Link href="/admin/dashboard" className="w-full cursor-pointer">Admin Dashboard</Link>
                     </DropdownMenuItem>
                   )}
-                  
+
                   <DropdownMenuItem onClick={logout} className="text-red-500 cursor-pointer">
                     <LogOut className="h-4 w-4 mr-2" /> Logout
                   </DropdownMenuItem>
@@ -128,7 +128,7 @@ const Header = () => {
                 <span>Account</span>
               </Link>
             )}
-            
+
             <Link href="/cart" className="relative text-neutral-600 hover:text-primary font-medium flex items-center">
                 <ShoppingCart className="h-5 w-5 mr-1" />
                 <span>Cart</span>
@@ -138,7 +138,7 @@ const Header = () => {
                   </span>
                 )}
             </Link>
-            
+
             {!user && (
               <Link href="/register" className="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md transition duration-200">
                 Sign In / Register
@@ -146,7 +146,7 @@ const Header = () => {
             )}
           </div>
         </div>
-        
+
         {/* Mobile search and menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4">
@@ -172,26 +172,26 @@ const Header = () => {
                 <Heart className="h-5 w-5 mr-2" />
                 <span>Wishlist</span>
               </Link>
-              
+
               {user ? (
                 <>
                   <Link href="/account" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
                       <User className="h-5 w-5 mr-2" />
                       <span>My Account</span>
                   </Link>
-                  
+
                   {user.role === 'seller' && (
                     <Link href="/seller/dashboard" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
                         <span>Seller Dashboard</span>
                     </Link>
                   )}
-                  
+
                   {user.role === 'admin' && (
                     <Link href="/admin/dashboard" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
                         <span>Admin Dashboard</span>
                     </Link>
                   )}
-                  
+
                   <Button 
                     variant="ghost" 
                     className="text-red-500 justify-start py-2 h-auto font-medium"
@@ -207,26 +207,22 @@ const Header = () => {
                   <span>Account</span>
                 </Link>
               )}
-              
-              <Link href="/cart">
-                <a className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
-                  <ShoppingCart className="h-5 w-5 mr-2" />
-                  <span>Cart ({cartItemCount})</span>
-                </a>
+
+              <Link href="/cart" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
+                <ShoppingCart className="h-5 w-5 mr-2" />
+                <span>Cart ({cartItemCount})</span>
               </Link>
-              
+
               {!user && (
-                <Link href="/register">
-                  <a className="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md transition duration-200 text-center">
+                <Link href="/register" className="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md transition duration-200 text-center">
                     Sign In / Register
-                  </a>
                 </Link>
               )}
             </div>
           </div>
         )}
       </nav>
-      
+
       <CategoryMenu />
     </header>
   );

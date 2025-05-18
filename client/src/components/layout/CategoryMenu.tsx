@@ -41,16 +41,12 @@ const CategoryMenu = () => {
       <div className="container mx-auto px-4">
         <ScrollArea className="w-full whitespace-nowrap">
           <div className="flex items-center py-2">
-            <Link href="/products">
-              <a className="text-white hover:text-secondary px-3 py-1 font-medium text-sm">
-                All Categories
-              </a>
+            <Link href="/products" className="text-white hover:text-secondary px-3 py-1 font-medium text-sm">
+              All Categories
             </Link>
             {categories.map((category) => (
-              <Link key={category.id} href={`/products?category=${category.slug}`}>
-                <a className="text-white hover:text-secondary px-3 py-1 font-medium text-sm">
-                  {category.name}
-                </a>
+              <Link key={category.id} href={`/products?category=${category.slug}`} className="text-white hover:text-secondary px-3 py-1 font-medium text-sm">
+                {category.name}
               </Link>
             ))}
           </div>
@@ -62,3 +58,4 @@ const CategoryMenu = () => {
 };
 
 export default CategoryMenu;
+```
