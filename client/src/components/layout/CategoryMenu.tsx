@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
@@ -58,4 +59,3 @@ const CategoryMenu = () => {
 };
 
 export default CategoryMenu;
-```
