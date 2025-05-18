@@ -23,23 +23,23 @@ const SellerCTA = () => {
     category: "",
     agreedToTerms: false,
   });
-  
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSelectChange = (value: string) => {
     setFormData(prev => ({ ...prev, category: value }));
   };
-  
+
   const handleCheckboxChange = (checked: boolean) => {
     setFormData(prev => ({ ...prev, agreedToTerms: checked }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.agreedToTerms) {
       toast({
         title: "Terms and Conditions",
@@ -48,13 +48,13 @@ const SellerCTA = () => {
       });
       return;
     }
-    
+
     // In a real implementation, this would call an API to register a seller
     toast({
       title: "Registration Submitted",
       description: "Thank you for your interest! We'll review your application soon.",
     });
-    
+
     // Reset form
     setFormData({
       businessName: "",
@@ -95,11 +95,11 @@ const SellerCTA = () => {
                 <span>Support at every step</span>
               </li>
             </ul>
-            <Link href="/seller/register">
-              <Button className="bg-white hover:bg-neutral-100 text-primary font-medium py-3 px-6 h-auto rounded-md transition duration-200">
+            <Button asChild className="bg-white hover:bg-neutral-100 text-primary font-medium py-3 px-6 h-auto rounded-md transition duration-200">
+              <Link href="/seller/register">
                 Start Selling Today
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
           <div className="w-full md:w-1/2 lg:w-2/5">
             <div className="bg-white rounded-lg p-6 text-neutral-800 shadow-lg">
@@ -118,7 +118,7 @@ const SellerCTA = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
                     <Input
@@ -131,7 +131,7 @@ const SellerCTA = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input
@@ -144,7 +144,7 @@ const SellerCTA = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <Label htmlFor="category">Business Category</Label>
                     <Select
@@ -164,7 +164,7 @@ const SellerCTA = () => {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div className="flex items-center space-x-2">
                     <Checkbox
                       id="terms"
@@ -183,7 +183,7 @@ const SellerCTA = () => {
                       </Link>
                     </Label>
                   </div>
-                  
+
                   <Button
                     type="submit"
                     className="bg-primary hover:bg-primary-dark text-white font-medium py-2 px-4 rounded-md transition duration-200"
