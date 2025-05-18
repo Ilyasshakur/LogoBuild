@@ -168,35 +168,27 @@ const Header = () => {
               </Button>
             </form>
             <div className="flex flex-col space-y-3">
-              <Link href="/wishlist">
-                <a className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
-                  <Heart className="h-5 w-5 mr-2" />
-                  <span>Wishlist</span>
-                </a>
+              <Link href="/wishlist" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
+                <Heart className="h-5 w-5 mr-2" />
+                <span>Wishlist</span>
               </Link>
               
               {user ? (
                 <>
-                  <Link href="/account">
-                    <a className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
+                  <Link href="/account" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
                       <User className="h-5 w-5 mr-2" />
                       <span>My Account</span>
-                    </a>
                   </Link>
                   
                   {user.role === 'seller' && (
-                    <Link href="/seller/dashboard">
-                      <a className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
+                    <Link href="/seller/dashboard" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
                         <span>Seller Dashboard</span>
-                      </a>
                     </Link>
                   )}
                   
                   {user.role === 'admin' && (
-                    <Link href="/admin/dashboard">
-                      <a className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
+                    <Link href="/admin/dashboard" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
                         <span>Admin Dashboard</span>
-                      </a>
                     </Link>
                   )}
                   
@@ -210,11 +202,9 @@ const Header = () => {
                   </Button>
                 </>
               ) : (
-                <Link href="/login">
-                  <a className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
-                    <User className="h-5 w-5 mr-2" />
-                    <span>Account</span>
-                  </a>
+                <Link href="/login" className="text-neutral-600 hover:text-primary font-medium py-2 flex items-center">
+                  <User className="h-5 w-5 mr-2" />
+                  <span>Account</span>
                 </Link>
               )}
               
