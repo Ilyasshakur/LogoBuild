@@ -10,16 +10,14 @@ const Logo = () => {
         fill="currentColor" 
         className="w-10 h-10"
       >
-        {/* Shopping basket top edge */}
-        <path d="M150,180 L350,180 L300,220 L200,220 Z" />
-        {/* Shopping basket sides */}
-        <path d="M140,220 L180,350 L320,350 L360,220 Z" />
+        {/* Shopping basket base */}
+        <path d="M100,200 L400,200 L350,300 L150,300 Z" />
+        {/* Vertical lines */}
+        <rect x="180" y="220" width="30" height="60" />
+        <rect x="235" y="220" width="30" height="60" />
+        <rect x="290" y="220" width="30" height="60" />
         {/* Handle */}
-        <path d="M200,160 Q250,120 300,160" strokeWidth="20" fill="none" stroke="currentColor" />
-        {/* Grid pattern */}
-        <rect x="180" y="250" width="25" height="70" rx="5" />
-        <rect x="237.5" y="250" width="25" height="70" rx="5" />
-        <rect x="295" y="250" width="25" height="70" rx="5" />
+        <path d="M200,180 L250,150 L300,180" strokeWidth="30" strokeLinecap="round" />
       </svg>
     </div>
   );
